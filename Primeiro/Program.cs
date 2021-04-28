@@ -34,7 +34,7 @@ namespace Primeiro
                 Console.WriteLine(a.ToString("F2", CultureInfo.InvariantCulture));
                 string ok = Console.ReadLine();
                 Console.WriteLine("Dados Registrados com sucesso!");
-
+                Console.WriteLine("Adcionado git hub");
 
 
 
