@@ -8,38 +8,24 @@ namespace Primeiro
         static void Main(string[] args)
         {
             {
-                Console.WriteLine("Entre com seu nome Completo ");
-                String n = Console.ReadLine();
-                Console.WriteLine("Quantos quartos tem sua casa? ");
-                int q = int.Parse(Console.ReadLine());
-                Console.WriteLine("Entre com o preço do produto ");
-                double p = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                Console.WriteLine("Entre seu último nome, idade e altura na mesma linha ");
-                string[] v = Console.ReadLine().Split(' ');
-                string u = v[0];
-                int i = int.Parse(v[1]);
-                double a = double.Parse(v[2], CultureInfo.InvariantCulture);
-                Console.WriteLine("Verifique Seus Dados digitando 'ok' para dados corretos");
-                Console.WriteLine("Nome Completo:");
-                Console.WriteLine(n);
-                Console.WriteLine("Número de quartos:");
-                Console.WriteLine(q);
-                Console.WriteLine("Valor do produto informado:");
-                Console.WriteLine(p.ToString("F2", CultureInfo.InvariantCulture));
-                Console.WriteLine("Último nome:");
-                Console.WriteLine(u);
-                Console.WriteLine("Idade informada:");
-                Console.WriteLine(i);
-                Console.WriteLine("Altura informada:");
-                Console.WriteLine(a.ToString("F2", CultureInfo.InvariantCulture));
-                string ok = Console.ReadLine();
-                Console.WriteLine("Dados Registrados com sucesso!");
-                Console.WriteLine("Adicionado git hub");
-                Console.WriteLine("teste");
+                double largura, comprimento, precoMetroQuadrado, area, preco;
 
+                Console.WriteLine("Digite a largura do seu terreno");
+                largura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                Console.WriteLine("Digite o comprimento do seu terreno");
+                comprimento = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                Console.WriteLine("Digite o preço do metro quadrado do seu terreno");
+                precoMetroQuadrado = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
+                area = largura * comprimento;
+                preco = area * precoMetroQuadrado;
 
+                Console.WriteLine("A Area do seu terreno é ");
+                Console.WriteLine(area.ToString("F2", CultureInfo.InvariantCulture));
+                Console.WriteLine("O preço do seu terreno é");
+                Console.WriteLine("R$ " + preco.ToString("F2", CultureInfo.InvariantCulture));
 
+                Console.ReadLine();
             }
         }
     }
