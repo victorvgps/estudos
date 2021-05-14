@@ -7,56 +7,70 @@ namespace Exercício
     {
         static void Main(string[] args)
         {
-            double salario, novoSalario, reajuste, percentual;
+            string palavra1, palavra2, palavra3;
+            palavra1 = Console.ReadLine();
+            palavra2 = Console.ReadLine();
+            palavra3 = Console.ReadLine();
 
-            salario = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            if (palavra1 == "vertebrado")
+            {
+                if (palavra2 == "mamifero")
+                {
+                    if (palavra3 == "onivoro")
+                    {
+                        Console.WriteLine("homem");
+                    }
+                    else
+                    {
+                        Console.WriteLine("vaca");
 
-            if (salario <= 400)
-            {
-                novoSalario = salario * 15.0 / 100.0 + salario;
-                reajuste = salario * 15.0 / 100.0;
-                percentual = 15.0;
-                Console.WriteLine("Novo salario: " + novoSalario.ToString("F2", CultureInfo.InvariantCulture));
-                Console.WriteLine("Reajuste ganho: " + reajuste.ToString("F2", CultureInfo.InvariantCulture));
-                Console.WriteLine("Em percentual: " + percentual + " %");
+                    }
+                }
             }
-            else if (salario >= 400.01 && salario <= 800.0)
             {
-                novoSalario = salario * 12.0 / 100.0 + salario;
-                reajuste = salario * 12.0 / 100.0;
-                percentual = 12.0;
-                Console.WriteLine("Novo salario: " + novoSalario.ToString("F2", CultureInfo.InvariantCulture));
-                Console.WriteLine("Reajuste ganho: " + reajuste.ToString("F2", CultureInfo.InvariantCulture));
-                Console.WriteLine("Em percentual: " + percentual + " %");
+                if (palavra2 == "ave")
+                {
+                    if (palavra3 == "onivoro")
+                    {
+                        Console.WriteLine("pomba");
+                    }
+                    else
+                    {
+                        Console.WriteLine("aguia");
+                    }
+                }
             }
-            else if (salario >= 800.01 && salario <= 1200)
+            if (palavra1 == "invertebrado")
             {
-                novoSalario = salario * 10.0 / 100.0 + salario;
-                reajuste = salario * 10.0 / 100.0;
-                percentual = 10.0;
-                Console.WriteLine("Novo salario: " + novoSalario.ToString("F2", CultureInfo.InvariantCulture));
-                Console.WriteLine("Reajuste ganho: " + reajuste.ToString("F2", CultureInfo.InvariantCulture));
-                Console.WriteLine("Em percentual: " + percentual + " %");
+                if (palavra2 == "inseto")
+                {
+                    if (palavra3 == "hematofago")
+                    {
+                        Console.WriteLine("pulga");
+                    }
+                    else
+                    {
+                        Console.WriteLine("lagarta");
+                    }
+                }
             }
-            else if (salario >= 1200.01 && salario <= 2000.0)
-            {
-                novoSalario = salario * 7.0 / 100.0 + salario;
-                reajuste = salario * 7.0 / 100.0;
-                percentual = 7.0;
-                Console.WriteLine("Novo salario: " + novoSalario.ToString("F2", CultureInfo.InvariantCulture));
-                Console.WriteLine("Reajuste ganho: " + reajuste.ToString("F2", CultureInfo.InvariantCulture));
-                Console.WriteLine("Em percentual: " + percentual + " %");
+                    if (palavra2 == "anelideo")
+                    {
+                        if (palavra3 == "hematofago")
+                        {
+                            Console.WriteLine("sanguessuga");
+                        }
+                        else
+                        {
+                            Console.WriteLine("minhoca");
+                        }
+                    }
+                }
             }
-            else if (salario >= 2000.01)
-            {
-                novoSalario = salario * 4.0 / 100.0 + salario;
-                reajuste = salario * 4.0 / 100.0;
-                percentual = 4.0;
-                Console.WriteLine("Novo salario: " + novoSalario.ToString("F2", CultureInfo.InvariantCulture));
-                Console.WriteLine("Reajuste ganho: " + reajuste.ToString("F2", CultureInfo.InvariantCulture));
-                Console.WriteLine("Em percentual: " + percentual + " %");
-            }
-        }
-    }
-}
+        }           
+
+
+
+
+
 
