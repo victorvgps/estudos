@@ -7,13 +7,28 @@ namespace Exercício
     {
         static void Main(string[] args)
         {
+            int x, y, minimo, maximo, soma;
+            x = int.Parse(Console.ReadLine());
+            y = int.Parse(Console.ReadLine());
 
-            int x, soma;
-                x = int.Parse(Console.ReadLine());
+            if (x < y)
+            {
+                minimo = x;
+                maximo = y;
+            }
+            else
+            {
+                minimo = y;
+                maximo = x;
+            }
+
             soma = 0;
-            while (x != 0) {
-                soma = soma + x;
-                x = int.Parse(Console.ReadLine());
+            for (int i = minimo + 1; i < maximo; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    soma = soma + i;
+                }
             }
             Console.WriteLine(soma);
         }
