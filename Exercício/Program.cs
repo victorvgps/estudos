@@ -7,30 +7,26 @@ namespace Exercício
     {
         static void Main(string[] args)
         {
-            int x, y, minimo, maximo, soma;
-            x = int.Parse(Console.ReadLine());
-            y = int.Parse(Console.ReadLine());
+            int n = int.Parse(Console.ReadLine());
 
-            if (x < y)
-            {
-                minimo = x;
-                maximo = y;
-            }
-            else
-            {
-                minimo = y;
-                maximo = x;
-            }
+            int cont_in = 0;
+            int cont_out = 0;
 
-            soma = 0;
-            for (int i = minimo + 1; i < maximo; i++)
+            for (int i = 0; i < n; i++)
             {
-                if (i % 2 != 0)
+                int x = int.Parse(Console.ReadLine());
+                if (x >= 10 && x <= 20)
                 {
-                    soma = soma + i;
+                    cont_in = cont_in + 1;
+                }
+                else
+                {
+                    cont_out = cont_out + 1;
                 }
             }
-            Console.WriteLine(soma);
+
+            Console.WriteLine(cont_in + " in");
+            Console.WriteLine(cont_out + " out");
         }
     }
 }
