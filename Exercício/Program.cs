@@ -7,43 +7,30 @@ namespace Exercício
     {
         static void Main(string[] args)
         {
+            int[,] a;
+            string[] s1 = Console.ReadLine().Split(' ');
+            int m = int.Parse(s1[0]);
+            int n = int.Parse(s1[1]);
+            a = new int[m, n];
 
-            int n = int.Parse(Console.ReadLine());
-
-            string[] nomes = new string[n];
-            int[] idades = new int[n];
-            double[] alturas = new double[n];
-
-            //Leitura dos dados
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < m; i++)
             {
                 string[] s = Console.ReadLine().Split(' ');
-                nomes[i] = s[0];
-                idades[i] = int.Parse(s[1]);
-                alturas[i] = double.Parse(s[2], CultureInfo.InvariantCulture);
-
-            }
-            // Cálculo da altura média das pessoas
-            double soma = 0.0;
-            for (int i = 0; i < n; i++)
-            {
-                soma = soma + alturas[i];
-            }
-            double media = soma / n;
-            Console.WriteLine("Altura média: " + media.ToString("F2", CultureInfo.InvariantCulture));
-
-            // Porcentagem de pessoas abaixo de 16 anos
-            int cont = 0;
-            for (int i = 0; i < n; i++)
-            {
-                if (idades[i] < 16)
+                for (int j = 0; j < n; j++)
                 {
-                    cont++;
+                    a[i, j] = int.Parse(s[j]);
                 }
             }
-                double porcentagem = (double)cont / n * 100.0;
-                Console.WriteLine("Pessoas com menos de 16 anos: " + porcentagem.ToString("F1", CultureInfo.InvariantCulture) + "%");
+
+            for (int i = 0; i < m; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    Console.WriteLine(a[i, j] + " ");
+                }
+                Console.WriteLine();
             }
 
         }
     }
+}
