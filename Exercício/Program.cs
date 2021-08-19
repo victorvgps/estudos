@@ -7,30 +7,39 @@ namespace Exercício
     {
         static void Main(string[] args)
         {
-            int[,] a;
-            string[] s1 = Console.ReadLine().Split(' ');
-            int m = int.Parse(s1[0]);
-            int n = int.Parse(s1[1]);
-            a = new int[m, n];
+            Triangulo x, y;
 
-            for (int i = 0; i < m; i++)
+            x = new Triangulo();
+            y = new Triangulo();
+
+            Console.WriteLine("Entre com as medidas do triangulo X");
+            x.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            x.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            x.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            Console.WriteLine("Entre com as medidas do triangulo Y");
+            y.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            y.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            y.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            double p = (x.A + x.B + x.C) / 2.0;
+            double areax = Math.Sqrt(p * (p - x.A) * (p - x.B) * (p - x.C));
+
+            p = (y.A + y.B + y.C) / 2.0;
+            double areay = Math.Sqrt(p * (p - y.A) * (p - y.B) * (p - y.C));
+
+            Console.WriteLine("Area de X = " + areax.ToString("F4", CultureInfo.InvariantCulture));
+            Console.WriteLine("Area de X = " + areay.ToString("F4", CultureInfo.InvariantCulture));
+
+            if (areax > areay)
             {
-                string[] s = Console.ReadLine().Split(' ');
-                for (int j = 0; j < n; j++)
-                {
-                    a[i, j] = int.Parse(s[j]);
-                }
+                Console.WriteLine("A maior area é do tríangulo X");
             }
-
-            for (int i = 0; i < m; i++)
+            else
             {
-                for (int j = 0; j < n; j++)
-                {
-                    Console.WriteLine(a[i, j] + " ");
-                }
-                Console.WriteLine();
+                Console.WriteLine("A maior area é do tríangulo Y");
             }
-
         }
     }
 }
+
