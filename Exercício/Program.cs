@@ -7,37 +7,28 @@ namespace Exercício
     {
         static void Main(string[] args)
         {
-            Triangulo x, y;
+            Pessoa p1 = new Pessoa();
+            Pessoa p2 = new Pessoa();
 
-            x = new Triangulo();
-            y = new Triangulo();
+            Console.WriteLine("Dados da primeira pessoa:");
+            Console.Write("Nome: ");
+            p1.Nome = Console.ReadLine();
+            Console.Write("Idade: ");
+            p1.Idade = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Entre com as medidas do triangulo X");
-            x.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            x.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            x.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine("Dados da segunda pessoa:");
+            Console.Write("Nome: ");
+            p2.Nome = Console.ReadLine();
+            Console.Write("Idade: ");
+            p2.Idade = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Entre com as medidas do triangulo Y");
-            y.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            y.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            y.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
-            double p = (x.A + x.B + x.C) / 2.0;
-            double areax = Math.Sqrt(p * (p - x.A) * (p - x.B) * (p - x.C));
-
-            p = (y.A + y.B + y.C) / 2.0;
-            double areay = Math.Sqrt(p * (p - y.A) * (p - y.B) * (p - y.C));
-
-            Console.WriteLine("Area de X = " + areax.ToString("F4", CultureInfo.InvariantCulture));
-            Console.WriteLine("Area de X = " + areay.ToString("F4", CultureInfo.InvariantCulture));
-
-            if (areax > areay)
+            if (p1.Idade > p2.Idade)
             {
-                Console.WriteLine("A maior area é do tríangulo X");
+                Console.WriteLine("A pessoa mais velha é " + p1.Nome);
             }
             else
             {
-                Console.WriteLine("A maior area é do tríangulo Y");
+                Console.WriteLine("A pessoa mais velha é " + p2.Nome);
             }
         }
     }

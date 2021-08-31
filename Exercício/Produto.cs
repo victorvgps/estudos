@@ -4,10 +4,12 @@ using System.Text;
 
 namespace Exercício
 {
-    class Triangulo
+    class Pessoa
     {
-        public double A;
-        public double B;
-        public double C;
+
+        public string Nome;
+        public int Idade;
+
+
     }
 }
