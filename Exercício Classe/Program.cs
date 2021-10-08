@@ -7,15 +7,15 @@ namespace Exercício_Classe
     {
         static void Main(string[] args)
         {
-            Produto p = new Produto();
 
             Console.WriteLine("Entre os dados do produto: ");
             Console.Write("Nome: ");
-            p.Nome = Console.ReadLine();
+            string Nome = Console.ReadLine();
             Console.Write("Preço: ");
-            p.Preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Console.Write("Quantidade no estoque: ");
-            p.Quantidade = int.Parse(Console.ReadLine());
+            double Preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            
+
+            Produto p = new Produto(Nome, Preco);
 
             Console.WriteLine();
             Console.WriteLine("Dados do produto: " + p);
