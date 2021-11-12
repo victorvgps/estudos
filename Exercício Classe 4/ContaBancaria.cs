@@ -23,6 +23,17 @@ namespace Exercício_Classe_4
             Saldo = saldo;
         }
 
+        public void Deposito(double quantia)
+        {
+            Saldo += quantia; 
+        }
+        public void Saque(double quantia)
+        {
+            Saldo -= quantia + 5.0;
+        }
+
+
+
         public override string ToString()
         {
             return "Conta "
