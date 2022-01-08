@@ -25,7 +25,7 @@ namespace Exercício_Lista
                 double salary = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                 list.Add(new Employee(id, name, salary));
                 Console.WriteLine();
-
+ 
             }
 
             Console.Write("Enter the employee id that will have salary increased: ");
