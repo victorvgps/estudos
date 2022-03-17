@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excercíco", "Excercíco\Ex
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercício vogal", "Exercício vogal\Exercício vogal.csproj", "{9CD6CAC0-D40F-428C-B764-C3993AE89E83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enumeração", "Enumeração\Enumeração.csproj", "{B11AF2DF-F190-4ECD-AEB8-05FF90AEB987}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumeração", "Enumeração\Enumeração.csproj", "{B11AF2DF-F190-4ECD-AEB8-05FF90AEB987}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enumerações e Composições", "Enumerações e Composições\Enumerações e Composições.csproj", "{7C80CC20-835B-467F-8C19-CC9549339AE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{B11AF2DF-F190-4ECD-AEB8-05FF90AEB987}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B11AF2DF-F190-4ECD-AEB8-05FF90AEB987}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B11AF2DF-F190-4ECD-AEB8-05FF90AEB987}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C80CC20-835B-467F-8C19-CC9549339AE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C80CC20-835B-467F-8C19-CC9549339AE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C80CC20-835B-467F-8C19-CC9549339AE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C80CC20-835B-467F-8C19-CC9549339AE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
